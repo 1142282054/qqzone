@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #fff;
+        }
+        ul li{
+            margin: 10px 0px;
+            list-style: none;
+            height: 40px;
+        }
+        li div{
+            float: left;
+        }
+        .left{
+            width: 20%;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            text-align: right;
+        }
+        .right{
+            width: 40%;
+            height: 40px;
+            line-height: 40px;
+        }
+        .right input{
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<form action="topic.do">
+    <input type="text" name="operate" value="addTopic" style="display: none;">
+    <input type="text" name="authorId" th:value="${session.userBasic.id}" style="display: none;">
+    <ul>
+        <li>
+            <div class="left">title1</div>
+            <div class="right"><input type="text" name="title"></div>
+        </li>
+        <li>
+            <div class="left">content</div>
+            <div class="right"><input type="text" name="content"></div>
+        </li>
+        <li>
+            <div class="left"></div>
+            <div class="right"><input type="submit" value="提交"></div>
+        </li>
+    </ul>
+</form>
+</body>
+</html>
